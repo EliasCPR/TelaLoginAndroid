@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        tools:context=".NcdActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ncd" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Calcular NCD"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-48dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="36dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nivel de Atividade:"
+                    android:textAppearance="@style/label_darkBackground"
+                    android:layout_marginTop="4dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_atividade"
+
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/nivelAtividade"
+                    android:layout_marginTop="4dp"
+                    android:padding="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Idade:"
+                    android:textAppearance="@style/label_darkBackground"
+                    android:layout_marginTop="4dp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_idade"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/faixa_idade"
+                    android:layout_marginTop="4dp"
+                    android:padding="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peso:"
+                    android:textAppearance="@style/label_darkBackground" />
+
+                <EditText
+                    android:id="@+id/ed_peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Qual o seu peso?"
+                    android:inputType="number"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Qual seu genêro:"
+                    android:textAppearance="@style/label_darkBackground"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/rgroup_genero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbutoon_feminino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:text="Feminino" />
+
+                    <RadioButton
+                        android:id="@+id/rbutoon_masculino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:text="Masculino" />
+                </RadioGroup>
+
+
+                <Button
+                    android:id="@+id/butoon_calcular_ncd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="48dp"
+                    android:background="@drawable/button_background"
+                    android:text="Calcular NCD" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    <!--    <RadioGroup-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <RadioButton-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Feminino" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Masculino" />-->
+    <!--    </RadioGroup>-->
+
+    <!--    <Spinner-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:entries="@array/estados"-->
+    <!--        style="@style/Widget.AppCompat.DropDownItem.Spinner"/>-->
+
+    </LinearLayout>
+</ScrollView>
