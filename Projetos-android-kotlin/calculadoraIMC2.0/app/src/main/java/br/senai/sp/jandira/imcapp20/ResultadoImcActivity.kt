@@ -26,7 +26,7 @@ class ResultadoImcActivity : AppCompatActivity() {
         val resultados = obterStatus(imc)
 
         // armazenar os dados no preferences
-        val editPreferences = sharedPreferences.Editor()
+        //val editPreferences = sharedPreferences.Editor()
 
         txtStatus.text = resultados[0]
         txtStatusRisk.text = resultados[1]
