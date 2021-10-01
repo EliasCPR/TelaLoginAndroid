@@ -1,23 +1,27 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-<!--Estilo titulo, texto usados como titulo-->
-    <style name="text_title" parent="TextAppearance.AppCompat.Large">
 
+    <!--    Estilo textos usados como título-->
+    <style name="text_title" parent="TextAppearance.AppCompat.Large">
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">48sp</item>
     </style>
-<!--    Estilo labels para backgrouds escuros-->
-    <style name="label_darkBackground" parent="TextAppearance.AppCompat.Medium">
+
+    <!--Estilo labels para backgrounds escuros-->
+    <style
+        name="label_dark_background"
+        parent="TextAppearance.AppCompat.Medium">
 
         <item name="android:textColor">@android:color/white</item>
 
     </style>
+
 </resources>

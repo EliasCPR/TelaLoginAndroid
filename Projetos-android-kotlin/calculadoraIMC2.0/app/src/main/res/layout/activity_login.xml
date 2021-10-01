@@ -1,160 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <RelativeLayout
-        android:id="@+id/rl_title"
+        android:id="@+id/rel_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="32dp">
+        android:padding="16dp"
+        android:background="@color/colorAccent">
 
         <TextView
+            android:id="@+id/tv_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="68dp"
-            android:fontFamily="@font/aclonica"
-            android:text="Boa\nForma"
-            android:textAlignment="center"
+            android:fontFamily="@font/paytone_one"
+            android:text="Health\nCalc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/white"
-            android:textSize="42sp" />
+            android:textSize="32sp"
+            android:gravity="end"
+            android:layout_alignParentStart="true"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_person_24" />
+            android:id="@+id/iv_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/peso_imc"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
 
     <View
         android:id="@+id/view_wave"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_wave"
+        android:layout_below="@id/rel_head"/>
+
+    <TextView
+        android:id="@+id/tv_login"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_below="@id/rl_title"
-        android:background="@drawable/ic_wave" />
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/view_wave"
+        android:textSize="32sp"
+        android:layout_marginStart="32dp"/>
+
+    <TextView
+        android:id="@+id/tv_faca_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faça login para continuar"
+        android:layout_below="@id/tv_login"
+        android:layout_marginStart="32dp"/>
 
     <TextView
         android:id="@+id/tv_mensagem_erro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_wave"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:textColor="@android:color/holo_red_light"/>
-    <TextView
-        android:id="@+id/txtLogin"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_below="@id/tv_faca_login"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/ed_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_below="@+id/view_wave"
-        android:paddingStart="18dp"
-        android:textSize="32sp"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/txtLogin"
+        android:layout_below="@id/tv_mensagem_erro"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_login_background"
         android:padding="16dp"
-        >
+        android:hint="E-mail"
+        android:drawableStart="@drawable/ic_email_24"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="16dp"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"/>
 
+    <EditText
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_user"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:inputType="numberPassword"
+        android:background="@drawable/edit_text_login_background"
+        android:padding="16dp"
+        android:hint="Senha"
+        android:drawableStart="@drawable/ic_lock_24"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="16dp"/>
 
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Entrar"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:layout_below="@id/ed_password"
+        android:background="@drawable/button_background"
+        android:padding="16dp"/>
 
+    <CheckBox
+        android:id="@+id/check_lembrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lembrar"
+        android:layout_below="@id/btn_login"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"/>
 
-        <EditText
-            android:id="@+id/ed_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:drawableStart="@drawable/ic_baseline_email_24"
-            android:drawablePadding="16dp"
-            android:hint="Seu e-mail"
-            android:inputType="textEmailAddress"
-            android:padding="16dp" />
+    <TextView
+        android:id="@+id/tv_esqueceu_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueceu a senha?"
+        android:layout_below="@id/check_lembrar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_blue_dark"/>
 
-        <EditText
-            android:id="@+id/ed_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ed_user"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/edit_text_background"
-            android:drawableStart="@drawable/ic_baseline_lock_24"
-            android:drawablePadding="16dp"
-            android:hint="Sua senha"
-            android:inputType="textPassword"
-            android:padding="16dp" />
+    <TextView
+        android:id="@+id/tv_novo_por_aqui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo por aqui?"
+        android:layout_below="@id/tv_esqueceu_senha"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@id/tv_crie_sua_conta"/>
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ed_password"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/button_background"
-            android:drawablePadding="16dp"
-            android:text="Login"
-            android:padding="16dp"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tv_crie_sua_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crie sua conta"
+        android:layout_below="@id/tv_esqueceu_senha"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/holo_blue_dark"/>
 
-        <CheckBox
-            android:id="@+id/checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lembrar Senha ?"
-            android:layout_below="@id/btnLogin"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_wave_reverse"
+        android:layout_alignParentBottom="true"/>
 
-        <TextView
-            android:id="@+id/esqueceuSeha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Esqueceu a senha ?"
-            android:layout_below="@+id/checkbox"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/holo_blue_dark"/>
+    <TextView
+        android:id="@+id/tv_rodape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvido por DS2M-A"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/white"/>
 
-        <TextView
-            android:id="@+id/novoAqui"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Novo por aqui ?"
-            android:layout_below="@+id/esqueceuSeha"
-            android:layout_centerInParent="true"
-            android:layout_toStartOf="@+id/crie_sua_conta"/>
-
-        <TextView
-            android:id="@+id/crie_sua_conta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Crie sua conta"
-            android:layout_below="@+id/esqueceuSeha"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="5dp"
-            android:textColor="@android:color/holo_blue_dark"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Desenvolvido por DS2M-A"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="-2dp"/>
-
-
-
-    </RelativeLayout>
 
 
 </RelativeLayout>

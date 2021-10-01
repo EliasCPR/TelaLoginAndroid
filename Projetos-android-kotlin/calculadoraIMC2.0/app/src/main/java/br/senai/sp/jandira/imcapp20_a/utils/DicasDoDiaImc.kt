@@ -1,10 +1,10 @@
-package br.senai.sp.jandira.imcapp20
+package br.senai.sp.jandira.imcapp20_a.utils
 
 import android.util.Log
 import java.util.*
-import kotlin.math.log
 
-fun getDicaDoDia(): String{
+fun getDicaDoDiaImc() : String {
+
     val dicas = listOf<String>(
         "Reduza alimentos com gordura, açúcar e sal. Tenha sempre frutas, verduras e legumes na alimentação diária.",
         "Inicie uma atividade física. Evite escadas rolantes e elevadores e suba a pé.",
@@ -16,4 +16,5 @@ fun getDicaDoDia(): String{
     val dica = sorteio.nextInt(dicas.size)
 
     return dicas[dica]
+
 }

@@ -1,31 +1,23 @@
 <resources>
-    <string name="app_name">IMC App 2.0</string>
+    <string name="app_name">IMC APP 2.0</string>
 
-    <!--    Strings da main activity-->
+    <!--    Strings Main Activity-->
     <string name="main_title">Calculadora Saudável</string>
-    <string name="fazer_hoje">O quê você deseja fazer hoje?</string>
-    <string name="resultado">Resultado</string>
+    <string name="text_fazer_hoje">O que você deseja fazer hoje?</string>
 
-    <string-array name="estados">
-        <item>São Paulo</item>
-        <item>Rio de Janeiro</item>
-        <item>Pernambuco</item>
-        <item>Rio grande do Sul</item>
-        <item>Parana</item>
-        <item>Amazonas</item>
-    </string-array>
-
-    <string-array name="nivelAtividade">
-        <item>Nenhuma</item>
-        <item>Atividade leve </item>
-        <item>Atividade moderada </item>
-        <item>Atividade intensa </item>
-    </string-array>
-
-    <string-array name="faixa_idade">
-        <item>Entre 18 a 30 anos </item>
-        <item>Entre 31 a 60 ano</item>
+    <string-array name="faixa_etaria">
+        <item>Selecione uma opção</item>
+        <item>Entre 18 e 30 anos</item>
+        <item>Entre 31 e 60 anos</item>
         <item>Acima de 60 anos</item>
     </string-array>
+
+    <string-array name="atividades">
+        <item>Nenhuma</item>
+        <item>Atividade leve</item>
+        <item>Atividade moderada</item>
+        <item>Atividade intensa</item>
+    </string-array>
+
 
 </resources>

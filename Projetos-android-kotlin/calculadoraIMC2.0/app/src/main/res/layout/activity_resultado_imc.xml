@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,9 +11,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
         android:orientation="vertical"
-        tools:context=".ResultadoImcActivity">
+        tools:context=".ui.ResultadoImcActivity"
+        android:background="@color/colorPrimary"
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -30,12 +32,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:text="Resultado"
                     android:layout_marginTop="48dp"
-                    android:text="@string/resultado"
+                    android:layout_gravity="center_horizontal"
                     android:textAppearance="@style/text_title"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="180dp"
@@ -48,8 +49,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/text_view_imc"
@@ -57,7 +58,7 @@
                             android:layout_height="wrap_content"
                             android:text="23.6"
                             android:textAppearance="@style/text_title"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"/>
 
                         <TextView
                             android:id="@+id/text_view_status"
@@ -65,9 +66,11 @@
                             android:layout_height="wrap_content"
                             android:text="Peso Ideal"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@android:color/black" />
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
+
 
                 </androidx.cardview.widget.CardView>
 
@@ -75,11 +78,11 @@
                     android:id="@+id/text_view_frase_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center"
                     android:text="Aqui vai o texto com o resultado do imc"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
             </LinearLayout>
 
@@ -88,26 +91,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:text="Dica!"
+            android:drawableStart="@drawable/ic_info"
+            android:drawablePadding="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="8dp"
-            android:drawableStart="@drawable/ic_info_24"
-            android:drawablePadding="16dp"
-            android:text="Dica!"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/white"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/text_view_dica"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:padding="16dp"
             android:text="Movimente-se (1)
 Inicie uma atividade física. Evite escadas rolantes e elevadores e suba a pé."
+            android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:padding="16dp"/>
 
     </LinearLayout>
+
 </ScrollView>

@@ -1,10 +1,12 @@
-package br.senai.sp.jandira.imcapp20
+package br.senai.sp.jandira.imcapp20_a.ui
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_resultado_imc.*
+import br.senai.sp.jandira.imcapp20_a.R
+import br.senai.sp.jandira.imcapp20_a.utils.calcularImc
+import br.senai.sp.jandira.imcapp20_a.utils.getDicaDoDiaImc
+import br.senai.sp.jandira.imcapp20_a.utils.obterStatus
 
 class ResultadoImcActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +16,7 @@ class ResultadoImcActivity : AppCompatActivity() {
         val txtImc: TextView = findViewById(R.id.text_view_imc)
         val txtStatus: TextView = findViewById(R.id.text_view_status)
         val txtStatusRisk: TextView = findViewById(R.id.text_view_frase_status)
-        val txtDica: TextView =findViewById(R.id.text_view_dica)
+        val txtDica: TextView = findViewById(R.id.text_view_dica)
 
         val peso = intent.getDoubleExtra("peso", 0.0)
         val altura = intent.getDoubleExtra("altura", 0.0)
@@ -25,11 +27,13 @@ class ResultadoImcActivity : AppCompatActivity() {
 
         val resultados = obterStatus(imc)
 
-        // armazenar os dados no preferences
-        //val editPreferences = sharedPreferences.Editor()
+        // Armazenar os dados no preferences
+        //val editPreferences = SharedPreferences.Editor()
 
         txtStatus.text = resultados[0]
         txtStatusRisk.text = resultados[1]
-        txtDica.text = getDicaDoDia()
+
+        txtDica.text = getDicaDoDiaImc()
+
     }
 }
